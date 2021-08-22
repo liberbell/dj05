@@ -6,5 +6,8 @@ def index(request):
     context = {
         "name": "Eric",
     }
-    
+
     return render(request, "myapp/index.html", context)
+
+def about(request):
+    return HttpResponse("hello world.")
