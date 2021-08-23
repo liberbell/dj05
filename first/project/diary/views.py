@@ -7,6 +7,6 @@ def index(request):
 
 def add(request):
     context = {
-        "form": DayCreateForm()
+        'form': DayCreateForm()
     }
     return render(request, "diary/day_form.html", context)
