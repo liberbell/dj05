@@ -1,3 +1,4 @@
+from first.project.diary.forms import DayCreateForm
 import re
 from django.shortcuts import render
 
@@ -6,4 +7,7 @@ def index(request):
     return render(request, "diary/day_list.html")
 
 def add(request):
-    return
+    context = {
+        "form": DayCreateForm()
+    }
+    return render(request, "diary/day_form.html", context)
