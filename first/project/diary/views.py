@@ -1,5 +1,4 @@
-from first.project.diary.forms import DayCreateForm
-import re
+from .forms import DayCreateForm
 from django.shortcuts import render
 
 # Create your views here.
