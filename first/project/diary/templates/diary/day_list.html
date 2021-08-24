@@ -3,5 +3,6 @@
 {% block content %}
     <h1>This is a diary list</h1>
     {% for day in day_list %}
+    <h2>{{ day.title }}</h2>
     {% endfor %}
 {% endblock content %}
