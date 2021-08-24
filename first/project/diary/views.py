@@ -4,6 +4,9 @@ from .models import Day
 
 # Create your views here.
 def index(request):
+    context = {
+        "day_list": Day.objects.all(),
+    }
     return render(request, "diary/day_list.html")
 
 def add(request):
