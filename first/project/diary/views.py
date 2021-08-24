@@ -7,7 +7,7 @@ def index(request):
     context = {
         "day_list": Day.objects.all(),
     }
-    return render(request, "diary/day_list.html")
+    return render(request, "diary/day_list.html", context)
 
 def add(request):
     form = DayCreateForm(request.POST or None)
