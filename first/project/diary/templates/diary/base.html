@@ -12,7 +12,7 @@
   <body>
     {% comment %} <h1>Hello, {{ name }}!</h1> {% endcomment %}
     <nav class="nav">
-        <a class="nav-link" href="#!">List</a>
+        <a class="nav-link" href="{% url "diary:index" %}">List</a>
         <a class="nav-link" href="#!">Add</a>
     </nav>
     {% block content%}
