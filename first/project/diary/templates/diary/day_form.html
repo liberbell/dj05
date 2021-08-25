@@ -7,6 +7,14 @@
                 <th>Title</th>
                 <td>{{ form.title }}</td>
             </tr>
+            <tr>   
+                <th>Content</th>
+                <td>{{ form.text }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <th>{{ form.date }}</th>
+            </tr>
         {{ form.as_p }}
         <button type="submit">Send</button>
         {% csrf_token %}
