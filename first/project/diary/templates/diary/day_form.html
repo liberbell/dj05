@@ -15,7 +15,8 @@
                 <th>Date</th>
                 <th>{{ form.date }}</th>
             </tr>
-        {{ form.as_p }}
+        </table>
+
         <button type="submit">Send</button>
         {% csrf_token %}
     </form>
