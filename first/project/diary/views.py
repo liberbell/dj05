@@ -22,3 +22,5 @@ def add(request):
 
 def update(request, pk):
     day = get_object_or_404(Day, pk=pk)
+
+    form = DayCreateForm(request.Post or None, instance=day)
