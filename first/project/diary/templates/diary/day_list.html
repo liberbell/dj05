@@ -2,7 +2,20 @@
 
 {% block content %}
     <h1>This is a diary list</h1>
-    {% for day in day_list %}
-    <h2>{{ day.title }}</h2>
-    {% endfor %}
+    <table class="table">
+        <trhead>
+            <tr>
+                <th>Title</th>
+                <th>Date</th>
+            </tr>
+        </thread>
+        <tbody>
+            {% for day in day_list %}
+            <tr>
+                <td>{{ day.title }}</td>
+                <td>{{ day.date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 {% endblock content %}
