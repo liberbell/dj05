@@ -1,3 +1,4 @@
+from django import forms
 from .forms import DayCreateForm
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Day
@@ -24,3 +25,9 @@ def update(request, pk):
     day = get_object_or_404(Day, pk=pk)
 
     form = DayCreateForm(request.Post or None, instance=day)
+
+    if request.method == "POST" and form.is_valid:
+        form.save()
+        return redirect("diary:index")
+
+        
