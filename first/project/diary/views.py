@@ -19,3 +19,6 @@ def add(request):
         'form': DayCreateForm()
     }
     return render(request, "diary/day_form.html", context)
+
+def update(request, pk):
+    day = get_object_or_404(Day, pk=pk)
