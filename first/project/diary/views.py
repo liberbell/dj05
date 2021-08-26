@@ -30,4 +30,7 @@ def update(request, pk):
         form.save()
         return redirect("diary:index")
 
-        
+    context = {
+        "form": form
+    }
+    return render(request, "diary/day_form.html", context)
