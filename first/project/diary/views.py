@@ -33,3 +33,5 @@ def update(request, pk):
         "form": form
     }
     return render(request, "diary/day_form.html", context)
+
+def delete(request, pk):
