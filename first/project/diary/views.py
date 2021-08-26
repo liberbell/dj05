@@ -44,4 +44,4 @@ def delete(request, pk):
     context = {
         "day": day,
     }
-    return render(request, "diary/day_form.html", context)
+    return render(request, "diary/day_confirm_delete.html", context)
