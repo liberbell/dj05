@@ -14,7 +14,7 @@
             <tr>
                 <td>{{ day.title }}</td>
                 <td>{{ day.date }}</td>
-                <td><a href="{% url 'diary:update' day.pk %}"></a></td>
+                <td><a href="{% url 'diary:update' day.pk %}">Update</a></td>
             </tr>
             {% endfor %}
         </tbody>
