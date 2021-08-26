@@ -15,6 +15,7 @@
                 <td>{{ day.title }}</td>
                 <td>{{ day.date }}</td>
                 <td><a href="{% url 'diary:update' day.pk %}">Update</a></td>
+                <td><a href="{% url 'diary:delete' day.pk %}">Delete</a></td>
             </tr>
             {% endfor %}
         </tbody>
