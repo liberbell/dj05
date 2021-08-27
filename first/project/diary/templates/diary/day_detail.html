@@ -1,0 +1,23 @@
+{% extends 'diary/base.html' %}
+
+{% block content %}
+    <form action="" method="POST">
+        <table class="table">
+            <tr>
+                <th>Title</th>
+                <td>{{ day.title }}</td>
+            </tr>
+            <tr>   
+                <th>Content</th>
+                <td>{{ day.text }}</td>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <th>{{ day.date }}</th>
+            </tr>
+        </table>
+        <button><a href="{% url 'diary/index' %}"></a> Back to list.</button>
+        {% csrf_token %}
+    </form>
+
+{% endblock content %}
