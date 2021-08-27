@@ -45,3 +45,15 @@ def delete(request, pk):
         "day": day,
     }
     return render(request, "diary/day_confirm_delete.html", context)
+
+def detail(request, pk):
+    day = get_object_or_404(Day, pk=pk)
+
+    if request.method == "POST":
+        day.delete()
+        return redirect("diary:index")
+
+    context = {
+        "day": day,
+    }
+    return render(request, "diary/day_detail.html", context)
