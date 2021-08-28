@@ -10,6 +10,7 @@ class indexView(generic.ListView):
 class AddView(generic.CreateView):
     model = Day
     form_class = DayCreateForm
+    success_url = reverse_lazy('diary:index')
 
 # Create your views here.
 def index(request):
