@@ -15,7 +15,7 @@ class AddView(generic.CreateView):
 class UpdateView(generic.UpdateView):
     model = Day
     form_class = DayCreateForm
-    success_url = reverse_lazy('diary:update')
+    success_url = reverse_lazy('diary:index')
 
 # Create your views here.
 def index(request):
