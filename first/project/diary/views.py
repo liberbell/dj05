@@ -6,6 +6,7 @@ from .models import Day
 
 class indexView(generic.ListView):
     model = Day
+    paginate_by = 3
 
 class AddView(generic.CreateView):
     model = Day
