@@ -26,6 +26,9 @@ class DeleteView(generic.DeleteView):
     model = Day
     success_url = reverse_lazy('diary:index')
 
+class DetailView(generic.DetailView):
+    model = Day
+
 # Create your views here.
 def index(request):
     context = {
