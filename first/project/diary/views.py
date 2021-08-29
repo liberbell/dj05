@@ -22,6 +22,10 @@ class UpdateView(generic.UpdateView):
     form_class = DayCreateForm
     success_url = reverse_lazy('diary:index')
 
+class DeleteView(generic.DeleteView):
+    model = Day
+    success_url = reverse_lazy('diary:index')
+
 # Create your views here.
 def index(request):
     context = {
