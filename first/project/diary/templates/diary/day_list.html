@@ -16,8 +16,8 @@
             <tr>
                 <td><a href="{% url 'diary:detail' day.pk %}">{{ day.title }}</a></td>
                 <td>{{ day.date }}</td>
-                {% comment %} <td><a href="{% url 'diary:update' day.pk %}">Update</a></td>
-                <td><a href="{% url 'diary:delete' day.pk %}">Delete</a></td> {% endcomment %}
+                <td><a href="{% url 'admin:diary_day_change' day.pk %}">Update</a></td>
+                <td><a href="{% url 'admin:diary_day_delete' day.pk %}">Delete</a></td> {% endcomment %}
                 <td><a href="#">Update</a></td>
                 <td><a href="#">Delete</a></td>
             </tr>
