@@ -18,8 +18,6 @@
                 <td>{{ day.date }}</td>
                 <td><a href="{% url 'admin:diary_day_change' day.pk %} target="_blank">Update</a></td>
                 <td><a href="{% url 'admin:diary_day_delete' day.pk %} target="_blank">Delete</a></td>
-                <td><a href="#">Update</a></td>
-                <td><a href="#">Delete</a></td>
             </tr>
             {% endfor %}
         </tbody>
