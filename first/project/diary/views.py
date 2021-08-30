@@ -2,6 +2,7 @@ from .forms import DayCreateForm
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic
 from django.urls import reverse_lazy
+from django.contrib.auth.mixins import LoginRequiredMixin
 from .models import Day
 
 class indexView(generic.ListView):
