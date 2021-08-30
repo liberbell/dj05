@@ -9,7 +9,7 @@ class indexView(generic.ListView):
     model = Day
     paginate_by = 3
 
-class AddView(generic.CreateView):
+class AddView(LoginRequiredMixin, generic.CreateView):
     model = Day
     form_class = DayCreateForm
     success_url = reverse_lazy('diary:index')
@@ -19,12 +19,12 @@ class AddView(generic.CreateView):
 #     form_class = DayCreateForm
 #     success_url = reverse_lazy('diary:index')
 
-class UpdateView(generic.UpdateView):
+class UpdateView(LoginRequiredMixin, generic.UpdateView):
     model = Day
     form_class = DayCreateForm
     success_url = reverse_lazy('diary:index')
 
-class DeleteView(generic.DeleteView):
+class DeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Day
     success_url = reverse_lazy('diary:index')
 
