@@ -17,4 +17,5 @@ class Employee(models.Model):
     department = models.ForeignKey(
         Department, verbose_name="Dep Name", on_delete=models.PROTECT
     )
+    created_at = models.DateTimeField("Date", default=timezone.now)
     
