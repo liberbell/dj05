@@ -14,4 +14,7 @@ class Employee(models.Model):
     first_name = models.CharField("First name", max_length=20)
     last_name = models.CharField("Last name", max_length=20)
     email = models.EmailField("E-mail", max_length=254, blank=True)
+    department = models.ForeignKey(
+        Department, verbose_name="Dep Name", on_delete=models.PROTECT
+    )
     
