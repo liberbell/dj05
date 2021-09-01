@@ -18,4 +18,6 @@ class Employee(models.Model):
         Department, verbose_name="Dep Name", on_delete=models.PROTECT
     )
     created_at = models.DateTimeField("Date", default=timezone.now)
-    
+
+    def __str__(self):
+        return self.name
