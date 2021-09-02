@@ -1,3 +1,4 @@
+from django.http import request
 from django.views import generic
 from .models import Employee
 from .forms import SearchForm
@@ -10,3 +11,6 @@ class IndexView(generic.ListView):
         context = super().get_context_data()
         context["form"] = SearchForm(self.request.GET)
         return context
+
+    def get_queryset(self):
+        form = SearchForm(self.request.Get)
