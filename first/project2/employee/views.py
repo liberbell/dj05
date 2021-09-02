@@ -1,6 +1,6 @@
-from first.project2.employee.forms import SearchForm
 from django.views import generic
 from .models import Employee
+from .forms import SearchForm
 
 # Create your views here.
 class IndexView(generic.ListView):
