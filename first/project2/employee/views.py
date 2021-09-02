@@ -18,3 +18,5 @@ class IndexView(generic.ListView):
 
         queryset = super().get_queryset
         department = form.cleaned_data()
+        if department:
+            queryset = queryset.filter(department=department)
