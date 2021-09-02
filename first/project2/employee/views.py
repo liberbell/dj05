@@ -18,7 +18,7 @@ class IndexView(generic.ListView):
 
         queryset = super().get_queryset()
 
-        department = form.cleaned_data()
+        department = form.cleaned_data["department"]
         if department:
             queryset = queryset.filter(department=department)
 
