@@ -16,7 +16,8 @@ class IndexView(generic.ListView):
         form = SearchForm(self.request.GET)
         form.is_valid()
 
-        queryset = super().get_queryset
+        queryset = super().get_queryset()
+
         department = form.cleaned_data()
         if department:
             queryset = queryset.filter(department=department)
