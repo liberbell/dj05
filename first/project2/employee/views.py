@@ -13,7 +13,7 @@ class IndexView(generic.ListView):
         return context
 
     def get_queryset(self):
-        form = SearchForm(self.request.Get)
+        form = SearchForm(self.request.GET)
         form.is_valid()
 
         queryset = super().get_queryset
