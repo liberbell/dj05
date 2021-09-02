@@ -20,3 +20,8 @@ class IndexView(generic.ListView):
         department = form.cleaned_data()
         if department:
             queryset = queryset.filter(department=department)
+
+        club = form.cleaned_data()
+        if club:
+            queryset = queryset.filter(club=club)
+        return queryset
