@@ -21,7 +21,7 @@
                 <td>{{ employee.first_name }}</td>
                 <td>{{ employee.email }}</td>
                 <td>{{ employee.department }}</td>
-                <td>{{ employee.club }}</td>
+                <td>{% for club in employee.club.all %}{{ club }}{% endfor %}</td>
             </tr>
         {% endfor %}
     </tbody>
