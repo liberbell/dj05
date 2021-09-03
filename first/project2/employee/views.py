@@ -6,6 +6,7 @@ from .forms import SearchForm
 # Create your views here.
 class IndexView(generic.ListView):
     model = Employee
+    paginate_by = 2
 
     def get_context_data(self):
         context = super().get_context_data()
