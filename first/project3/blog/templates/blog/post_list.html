@@ -1,5 +1,7 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-    <h1>This is a blog site.</h1>
+    {% for post in post_list %}
+        <h2>{{ blog.title }}</h2>
+    {% endfor %}
 {% endblock content %}
