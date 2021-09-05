@@ -16,6 +16,8 @@ class Post(models.Model):
     text = models.TextField("Body")
     created_at = models.DateTimeField("Created date", default=timezone.now)
 
+    category = models.ForeignKey(Category, verbose_name="Category name", on_delete=models.PROTECT)
+
     def __str__(self):
         return self.title
     
