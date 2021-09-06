@@ -5,7 +5,8 @@
         <div class="card mb-3">
         <h2 class="card-header bg-dark text-white">{{ post.title }}</h2>
             <div class="card-body">
-                <a href="#" class="btn btn-primary">Detail</a>
+                <p>{{ post.created_at }}, {{ post.category }}</p>
+                <a href="#" class="btn btn-primary btn-dark">Detail</a>
             </div>
         </div>
     {% endfor %}
