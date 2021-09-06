@@ -3,16 +3,10 @@
 {% block content %}
     {% for post in post_list %}
         <div class="card">
-        <div class="card-header">
-            Featured
-        </div>
-        <div class="card-body">
-            <h5 class="card-title">{{ post.title }}</h5>
-            <a href="#" class="btn btn-primary">Detail</a>
-        </div>
-        <div class="card-footer text-muted">
-            2 days ago
-        </div>
+            <div class="card-body">
+                <h5 class="card-title">{{ post.title }}</h5>
+                <a href="#" class="btn btn-primary">Detail</a>
+            </div>
         </div>
     {% endfor %}
 {% endblock content %}
