@@ -49,7 +49,9 @@
           {% endblock %}
         </div>
         <div class="col-md-4">
-          Category List
+          {% for category in category_list %}
+            {{ category }}
+          {% endfor %}
         </div>
       </div>
     </div>
