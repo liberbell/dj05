@@ -1,5 +1,6 @@
 from django.db.models.query import QuerySet
 from django.views import generic
+from django.db.models import Q
 from .models import Post
 
 # Create your views here.
