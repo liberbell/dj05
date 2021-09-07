@@ -52,7 +52,7 @@
         <ul class="list-group">
           <li class="list-group-item bg-dark text-white">Category List</li>
           {% for category in category_list %}
-            <li class="list-group-item">{{ category }}</li>
+            <li class="list-group-item"><a href="{% url 'blog:category' category.pk %}">{{ category }}</a></li>
           {% endfor %}
         </ul>
         </div>
