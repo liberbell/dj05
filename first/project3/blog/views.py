@@ -8,7 +8,7 @@ class IndexView(generic.ListView):
     # template_name = "blog/post_list.html"
 
     def get_queryset(self):
-        querySet = Post.objects.order_by("-created_at")
+        queryset = Post.objects.order_by("-created_at")
         keyword = self.request.GET.get("keyword")
 
         if keyword:
