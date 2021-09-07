@@ -6,6 +6,7 @@ from .models import Post
 # Create your views here.
 class IndexView(generic.ListView):
     model = Post
+    paginate_by = 5
     # template_name = "blog/post_list.html"
 
     def get_queryset(self):
