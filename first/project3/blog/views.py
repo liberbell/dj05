@@ -13,6 +13,8 @@ class IndexView(generic.ListView):
         keyword = self.request.GET.get("keyword")
 
         if keyword:
-            queryset = queryset.filter(title__icontains=keyword)
+            queryset = queryset.filter(
+                Q(title__icontains=keyword) | Q(text_icontains=keyword)
+            )
         return queryset
     
