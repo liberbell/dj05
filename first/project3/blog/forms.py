@@ -7,4 +7,4 @@ class CommentCreateForms(models.ModelForm):
 
     class Meta:
         model = Comment
-        fields = "__all__"
+        fields = ["name", "text"]
