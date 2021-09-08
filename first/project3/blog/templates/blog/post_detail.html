@@ -5,7 +5,7 @@
         <h2 class="card-header bg-dark text-white">{{ post.title }}</h2>
             <div class="card-body">
                 <p>{{ post.created_at }}, {{ post.category }}</p>
-                {{ post.text | linebreaksbr}}
+                {{ post.text | linebreaksbr | urlize }}
             </div>
     </div>
 {% endblock content %}
