@@ -35,7 +35,7 @@ class DetailView(generic.DetailView):
 
 class CommentView(generic.CreateView):
     model = Comment
-    from_class = CommentCreateForms
+    form_class = CommentCreateForms
 
     def form_valid(self, form):
         post_pk = self.kwargs["post_pk"]
