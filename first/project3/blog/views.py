@@ -1,6 +1,6 @@
 from django.views import generic
 from django.db.models import Q
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, redirect
 from .models import Post, Category, Comment
 from .forms import CommentCreateForms
 
@@ -32,3 +32,10 @@ class CategoryView(generic.ListView):
     
 class DetailView(generic.DetailView):
     model = Post
+
+class CommentView(generic.CreateView):
+    model = Comment
+    from_class = CommentCreateForms
+
+    def form_valid(self, form):
+        post_pk = self.kwargs["post_pk"]
