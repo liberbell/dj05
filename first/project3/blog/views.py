@@ -1,4 +1,5 @@
 from django.db import models
+from django.db.models.fields import CharField
 from django.db.models.query import QuerySet
 from django.views import generic
 from django.db.models import Q
