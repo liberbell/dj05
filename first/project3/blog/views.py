@@ -39,3 +39,6 @@ class CommentView(generic.CreateView):
 
     def form_valid(self, form):
         post_pk = self.kwargs["post_pk"]
+        comment = form.save(commit=False)
+        comment.post = get_object_or_404(Post, pk=post_pk)
+        comment.save()
