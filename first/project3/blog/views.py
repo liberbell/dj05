@@ -31,6 +31,5 @@ class CategoryView(generic.ListView):
         queryset = Post.objects.order_by("-created_at").filter(category=category)
         return queryset
     
-class DetailView(generic.DeleteView):
+class DetailView(generic.DetailView):
     model = Post
-    
