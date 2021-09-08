@@ -26,3 +26,7 @@ class Comment(models.Model):
     text = models.TextField("Text")
     post = models.ForeignKey(Post, verbose_name=("Articles"), on_delete=models.PROTECT)
     created_at = models.DateTimeField("Created date", default=timezone.now)
+
+    def __str__(self):
+        return self.test[:10]
+    
