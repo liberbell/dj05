@@ -8,7 +8,7 @@
                 {{ post.text | linebreaksbr | urlize }}
             </div>
     </div>
-    {% for comment in post.comment_self.all %}
+    {% for comment in post.comment_set.all %}
         <p>
             {{ comment.name }}<br>
             {{ comment.text | linebreaksbr}}
