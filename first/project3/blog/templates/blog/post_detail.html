@@ -10,8 +10,8 @@
     </div>
     {% for comment in post.comment_set.all %}
         <p>
-            {{ comment.name }}<br>
-            {{ comment.text | linebreaksbr}}
+            Name:    {{ comment.name }}<br>
+            Comment: {{ comment.text | linebreaksbr}}
         </p>
     {% endfor %}
 
