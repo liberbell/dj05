@@ -2,8 +2,12 @@
 
 {% block content %}
     <form action="" method="POST">
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-dark">Send</button>
+        {% for field in form %}
+            <div class="form-group">
+                <label for="{{ field_for_label }}">{{ field.label_tag }}</label>
+            </div>
+        {% endfor %}
         {% csrf_token %}
+        <button type="submit" class="btn btn-dark">Send</button>
     </form>
 {% endblock content %}
