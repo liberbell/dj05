@@ -8,6 +8,12 @@
                 {{ post.text | linebreaksbr | urlize }}
             </div>
     </div>
+    {% for comment in post.comment_self.all %}
+        <p>
+            {{ comment.name }}<br>
+            {{ comment.text | linebreaksbr}}
+        </p>
+    {% endfor %}
 
     <a href="{% url 'blog:comment' post.pk %}" class="btn btn-dark">Comment</a>
 {% endblock content %}
