@@ -48,3 +48,7 @@ class CommentView(generic.CreateView):
         super().__init__(*args, **kwargs)
         for field in self.fields.values():
             fields.widget.attrs["class"] = "form-control"
+
+    class Meta:
+        model = Comment
+        fields = ("name", "text")
