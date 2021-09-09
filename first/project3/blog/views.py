@@ -34,21 +34,12 @@ class DetailView(generic.DetailView):
     model = Post
 
 class CommentView(generic.CreateView):
-    # model = Comment
-    # form_class = CommentCreateForms
+    model = Comment
+    form_class = CommentCreateForms
 
-    # def form_valid(self, form):
-    #     post_pk = self.kwargs["post_pk"]
-    #     comment = form.save(commit=False)
-    #     comment.post = get_object_or_404(Post, pk=post_pk)
-    #     comment.save()
-    #     return redirect("blog:detail", pk=post_pk)
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        for field in self.fields.values():
-            field.widget.attrs["class"] = "form-control"
-
-    class Meta:
-        model = Comment
-        fields = ("name", "text")
+    def form_valid(self, form):
+        post_pk = self.kwargs["post_pk"]
+        comment = form.save(commit=False)
+        comment.post = get_object_or_404(Post, pk=post_pk)
+        comment.save()
+        return redirect("blog:detail", pk=post_pk)
