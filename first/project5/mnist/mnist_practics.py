@@ -4,6 +4,8 @@ from PIL import Image
 from sklearn import datasets, svm
 from sklearn.model_selection import train_test_split
 
+
+
 # サンプル画像データのロード
 mnist = datasets.fetch_openml('mnist_784', data_home='image/')
 X = mnist.data / 255
