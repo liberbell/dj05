@@ -9,6 +9,10 @@ def read():
         clf = pickle.load(file)
     return clf
 
+def create_and_save():
+    mnist = datasets.fetch_mldata("MNIST original", data_home="image/")
+
+
 # サンプル画像データのロード
 mnist = datasets.fetch_openml('mnist_784', data_home='image/')
 X = mnist.data / 255
