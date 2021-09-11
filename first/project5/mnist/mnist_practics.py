@@ -14,6 +14,10 @@ def create_and_save():
     X = mnist.data / 255
     Y = mnist.target
 
+    X_train, X_test, y_train, y_test = train_test_split(
+    X, y, train_size=1000, test_size=300
+    )
+
 # サンプル画像データのロード
 mnist = datasets.fetch_openml('mnist_784', data_home='image/')
 X = mnist.data / 255
