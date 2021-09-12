@@ -1,3 +1,4 @@
+from inspect import classify_class_attrs
 import pickle
 import numpy as np
 from PIL import Image
@@ -24,6 +25,11 @@ def create_and_save():
     with("mnist", "wb") as file:
         pickle.dump(clf, file)
     return clf
+
+try:
+    clf = read()
+except FileNotFoundError:
+    clf = create_and_save()
 
 # # サンプル画像データのロード
 # mnist = datasets.fetch_openml('mnist_784', data_home='image/')
