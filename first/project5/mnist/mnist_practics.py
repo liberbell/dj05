@@ -38,6 +38,8 @@ def predict(img_array):
 if __name__ == "__main__":
     for i in range(0, 10):
         file_name = "{}.png".format(i)
+        img = Image.open(file_name)
+        img = np.asarray(img) / 255
 
 # # サンプル画像データのロード
 # mnist = datasets.fetch_openml('mnist_784', data_home='image/')
