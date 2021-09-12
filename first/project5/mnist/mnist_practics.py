@@ -31,6 +31,10 @@ try:
 except FileNotFoundError:
     clf = create_and_save()
 
+def predict(img_array):
+    result = clf.predict(img_array)
+    return str(int(result[0]))
+
 # # サンプル画像データのロード
 # mnist = datasets.fetch_openml('mnist_784', data_home='image/')
 # X = mnist.data / 255
