@@ -40,6 +40,7 @@ if __name__ == "__main__":
         file_name = "{}.png".format(i)
         img = Image.open(file_name)
         img = np.asarray(img) / 255
+        img_array = img.resharpe(1, 784)
 
 # # サンプル画像データのロード
 # mnist = datasets.fetch_openml('mnist_784', data_home='image/')
