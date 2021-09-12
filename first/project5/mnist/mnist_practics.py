@@ -35,6 +35,10 @@ def predict(img_array):
     result = clf.predict(img_array)
     return str(int(result[0]))
 
+if __name__ == "__main__":
+    for i in range(0, 10):
+        file_name = "{}.png".format(i)
+
 # # サンプル画像データのロード
 # mnist = datasets.fetch_openml('mnist_784', data_home='image/')
 # X = mnist.data / 255
